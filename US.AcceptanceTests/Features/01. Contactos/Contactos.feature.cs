@@ -44,8 +44,8 @@ namespace US.AcceptanceTests.Features._01_Contactos
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Contactos", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Contactos", null, ProgrammingLanguage.CSharp, new string[] {
+                        "Story:Contactos"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -86,27 +86,6 @@ namespace US.AcceptanceTests.Features._01_Contactos
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("The user \'mngr94766\' can login into the home page")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Contactos")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void TheUserMngr94766CanLoginIntoTheHomePage()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user \'mngr94766\' can login into the home page", null, new string[] {
-                        "mytag"});
-#line 7
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 8
- testRunner.Given("The user enters to the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.When("The user logs with a valid user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
- testRunner.Then("The user \'mngr94766\' has logged correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
         }
     }
 }

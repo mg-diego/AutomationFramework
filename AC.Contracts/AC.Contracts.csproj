@@ -95,8 +95,9 @@
   <ItemGroup>
     <Compile Include="IPageBase.cs" />
     <Compile Include="ISetUp.cs" />
-    <Compile Include="Pages\ILoginBasePage.cs" />
-    <Compile Include="Pages\IContactosPage.cs" />
+    <Compile Include="Pages\01. Contactos\ICrearContactoPage.cs" />
+    <Compile Include="Pages\00. Login\ILoginBasePage.cs" />
+    <Compile Include="Pages\01. Contactos\IContactosPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

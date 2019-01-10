@@ -114,10 +114,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Contactos.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\01. Contactos\CrearContacto.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrearContacto.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\ContactosStep.cs" />
+    <Compile Include="Steps\01. Contactos\CrearContactoStep.cs" />
+    <Compile Include="Steps\01. Contactos\ContactosStep.cs" />
     <Compile Include="Steps\StepBase.cs" />
-    <Compile Include="Steps\LoginBaseSteps.cs" />
+    <Compile Include="Steps\00. Login\LoginBaseSteps.cs" />
     <Compile Include="TestDependencies.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +135,10 @@
     <None Include="Features\01. Contactos\Contactos.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Contactos.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\01. Contactos\CrearContacto.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CrearContacto.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>

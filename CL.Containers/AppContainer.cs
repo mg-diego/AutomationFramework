@@ -29,8 +29,11 @@ namespace CL.Containers
                 var buildContainer = new UnityContainer();
 
                 buildContainer.RegisterType<ISetUp, SetUpDriver>();   
+
                 buildContainer.RegisterType<ILoginBasePage, LoginBasePage>();
+
 				buildContainer.RegisterType<IContactosPage, ContactosPage>();
+				buildContainer.RegisterType<ICrearContactoPage, CrearContactoPage>();
 
 				Container = buildContainer;
             }

@@ -120,9 +120,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\ContactosPage.cs" />
+    <Compile Include="Pages\01. Contactos\CrearContactoPage.cs" />
+    <Compile Include="Pages\01. Contactos\ContactosPage.cs" />
     <Compile Include="PageBase.cs" />
-    <Compile Include="Pages\LoginBasePage.cs" />
+    <Compile Include="Pages\00. Login\LoginBasePage.cs" />
     <Compile Include="SetUpDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
