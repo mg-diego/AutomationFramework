@@ -22,7 +22,7 @@ namespace AC.SeleniumDriver
 		private static InternetExplorerDriver ieWebDriver;
 
 		// ENVIRONMENTS
-		public string environment = "http://localhost:4200/contactos";
+		public string environment = "http://demo.guru99.com/Agile_Project/Agi_V1/";
 
 
 		WebBrowser webBrowser = WebBrowser.Chrome;
@@ -280,7 +280,7 @@ namespace AC.SeleniumDriver
 				firefoxWebDriver.Manage().Window.Maximize();
 
 				//--- LOCALHOST ---//
-				firefoxWebDriver.Navigate().GoToUrl("http://localhost:4200/login");
+				firefoxWebDriver.Navigate().GoToUrl(environment);
 
 				return firefoxWebDriver;
 			}
@@ -312,7 +312,7 @@ namespace AC.SeleniumDriver
 				ieWebDriver.Manage().Window.Maximize();
 
 				//--- LOCALHOST ---//
-				ieWebDriver.Navigate().GoToUrl("http://localhost:4200/login");
+				ieWebDriver.Navigate().GoToUrl(environment);
 
 				return ieWebDriver;
 			}

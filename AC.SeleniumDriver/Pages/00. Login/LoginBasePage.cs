@@ -23,14 +23,14 @@ namespace AC.SeleniumDriver.Pages
     {
 		#region .: Selenium WebDriver Elements :.
 
-		[FindsBy(How = How.Id, Using = "i0116")]
+		[FindsBy(How = How.Name, Using = "uid")]
 		private IWebElement _inputEmail;
 
-		[FindsBy(How = How.Id, Using = "i0118")]
+		[FindsBy(How = How.Name, Using = "password")]
 		private IWebElement _inputPassword;
 
-		[FindsBy(How = How.Id, Using = "idSIButton9")]
-		private IWebElement _btnContinue;
+		[FindsBy(How = How.Name, Using = "btnLogin")]
+		private IWebElement _btnLogin;
 
 		[FindsBy(How = How.Id, Using = "usernameError")]
 		private IWebElement _txtUsernameError;
@@ -40,6 +40,11 @@ namespace AC.SeleniumDriver.Pages
 
 		[FindsBy(How = How.Id, Using = "passwordError")]
 		private IWebElement _txtPasswordError;
+
+		[FindsBy(How = How.XPath, Using = "//*[@href='Customerhomepage.php']")]
+		private IWebElement _CustomerTab;
+
+		
 
 		#endregion
 
@@ -68,17 +73,17 @@ namespace AC.SeleniumDriver.Pages
 		/// </summary>
 		public void ClickContinueButton()
 		{
-			WaitUntilElementIsVisible(_btnContinue);
-			this._btnContinue.Click();
+			WaitUntilElementIsVisible(_btnLogin);
+			this._btnLogin.Click();
 		}
 
 		/// <summary>
 		/// Inserts a valid email at email login input
 		/// </summary>
-		public void InsertValidEmail()
+		public void InsertValidUser()
 		{
 			WaitUntilElementIsVisible(_inputEmail);
-			this._inputEmail.SendKeys("rentauser@djardi.onmicrosoft.com");
+			this._inputEmail.SendKeys("1303");
 		}
 
 		/// <summary>
@@ -87,7 +92,7 @@ namespace AC.SeleniumDriver.Pages
 		public void InsertValidPassword()
 		{
 			WaitUntilElementIsVisible(_inputPassword);
-			this._inputPassword.SendKeys("Welcometoerni!");
+			this._inputPassword.SendKeys("Guru99");
 		}
 
 		/// <summary>
@@ -126,6 +131,19 @@ namespace AC.SeleniumDriver.Pages
 		{
 			WaitUntilElementIsVisible(_inputEmail);
 			this._inputEmail.SendKeys(RandomString(5) + "@gmail.com");
+		}
+
+
+		public bool IsAtHomepage()
+		{
+			WaitUntilElementIsVisible(_CustomerTab);
+
+			Assert.Multiple(() =>
+			{
+				Assert.That(_CustomerTab.Displayed, Is.EqualTo(true), "_CustomerTab is not displayed");
+			});
+
+			return true;
 		}
 
 

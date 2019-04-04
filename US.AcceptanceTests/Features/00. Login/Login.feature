@@ -40,3 +40,10 @@ Scenario: Login - Valid password
 	Then The user is at Contactos tab
 
 
+Scenario: 1. Valid Login
+	Given The user introduces a 'valid' email
+	When The user introduces a 'valid' password
+	And The user clicks Login button
+	Then The user is at homepage
+
+

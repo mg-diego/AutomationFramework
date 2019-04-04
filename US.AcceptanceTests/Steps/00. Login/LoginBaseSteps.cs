@@ -54,10 +54,19 @@ namespace US.AcceptanceTests.Steps.Login
 		[SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
 		[When(@"The user clicks continue button")]
 		[When(@"The user confirms the login")]
+		[When(@"The user clicks Login button")]
 		public void TheUserClicksContinueButton()
 		{
 			loginBasePage.ClickContinueButton();
 		}
+
+
+		[Then(@"The user is at homepage")]
+		public void ThenTheUserIsAtHomepage()
+		{
+			loginBasePage.IsAtHomepage();
+		}
+
 
 
 		/// <summary>
@@ -71,7 +80,7 @@ namespace US.AcceptanceTests.Steps.Login
 			switch (emailType)
 			{
 				case "valid":
-					this.loginBasePage.InsertValidEmail();
+					this.loginBasePage.InsertValidUser();
 					break;
 				case "invalid":
 					this.loginBasePage.InsertInvalidEmail();

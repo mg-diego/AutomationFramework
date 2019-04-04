@@ -10,7 +10,7 @@ namespace AC.Contracts.Pages
     {
 		void ClickContinueButton();
 
-		void InsertValidEmail();
+		void InsertValidUser();
 
 		void InsertValidPassword();
 
@@ -30,5 +30,6 @@ namespace AC.Contracts.Pages
 
 		bool IsAtInvalidPassword();
 
+		bool IsAtHomepage();
 	}
 }
