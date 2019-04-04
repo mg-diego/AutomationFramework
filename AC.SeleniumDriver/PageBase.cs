@@ -131,13 +131,13 @@ namespace AC.SeleniumDriver
 			{
 				if (list.Count < 1)
 				{
-					driver.ScrollDown();
+					//driver.ScrollDown();
 					return list[0].Displayed && list[0].Enabled;
 				}
 			}
 			catch (Exception ex)
 			{
-				driver.ScrollUp();
+				//driver.ScrollUp();
 				throw new Exception($"Element {list.ToString()} has not been found", ex);
 			}
 			return false;
@@ -155,19 +155,7 @@ namespace AC.SeleniumDriver
             this.webDriverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
         }
 
-        //TBD
-        /*
-        public bool IsElementVisible(string element)
-        {
-            return webDriver.FindElements(By.XPath (element)).Count > 0
-                && webDriver.FindElement(By.XPath (element)).Displayed;
-        }
-        
 
-        public bool IsElementNotVisible(string element)
-        {
-            return !IsElementVisible(element);
-        }*/
 
     }
 }
